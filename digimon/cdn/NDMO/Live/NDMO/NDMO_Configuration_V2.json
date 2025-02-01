@@ -2,7 +2,7 @@
   "ServerInfo": {
     "Maintenance": false,
     "Message": {
-      "Title": "Digital Shinka Online In Development.",
+      "Title": "Neon Digiverse Online.",
       "Msg": "The server is undergoing inspection or updates.\nConnect to <https://discord.gg/vtNnzfSF for more information."
     }
   },
@@ -14,8 +14,8 @@
   "LanuncherInfo": {
     "DownloadPath": "https://misionegro.github.io/backend/Launcher/",
     "CurrentVersion": 310,
-    "ExeFileName": "DSOLauncher.exe",
-    "RunExeFileName": "OPENSOURCE.exe",
+    "ExeFileName": "Neon Digiverse.exe",
+    "RunExeFileName": "Neon.exe",
     "VersionList": [
       {
         "Version": 310,
@@ -75,7 +75,7 @@
     "DownloadPath": "https://misionegro.github.io/backend/UpdateManager/",
     "CurrentVersion": 8,
     "ExeFileName": "UpdateManager.exe",
-    "RunExeFileName": "DSOLauncher.exe",
+    "RunExeFileName": "Neon Digiverse.exe",
     "VersionList": [
       {
         "Version": 8,
