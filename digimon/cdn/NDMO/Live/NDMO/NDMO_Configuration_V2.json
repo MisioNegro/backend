@@ -7,12 +7,12 @@
     }
   },
   "PatchInfo": {
-    "DownloadUrl": "https://jazepai.github.io/Launcher123D3131SO/UpdatePatch/",
+    "DownloadUrl": "https://misionegro.github.io/backend/UpdatePatch/",
     "MinPatchVersion": 1,
     "PatchVersion": 1
   },
   "LanuncherInfo": {
-    "DownloadPath": "https://jazepai.github.io/Launcher123D3131SO/Launcher/",
+    "DownloadPath": "https://misionegro.github.io/backend/Launcher/",
     "CurrentVersion": 310,
     "ExeFileName": "DSOLauncher.exe",
     "RunExeFileName": "OPENSOURCE.exe",
@@ -72,7 +72,7 @@
     ]
   },
   "UMInfo": {
-    "DownloadPath": "https://jazepai.github.io/Launcher123D3131SO/UpdateManager/",
+    "DownloadPath": "https://misionegro.github.io/backend/UpdateManager/",
     "CurrentVersion": 8,
     "ExeFileName": "UpdateManager.exe",
     "RunExeFileName": "DSOLauncher.exe",
@@ -103,14 +103,14 @@
       }
     ]
   },
-  "RumbleConfig": "https://digital-shinka.github.io/digimon/cdn/rumble/live/RumbleConfig.json",
+  "RumbleConfig": "https://misionegro.github.io/digimon/cdn/rumble/live/RumbleConfig.json",
   "MainUrl": [
     {
       "TypeName": "GSP",
       "HomePageUrl": "https://discord.gg/vtNnzfSF",
       "GameDownloadUrl": "https://discord.gg/vtNnzfSF",
-      "MainPageUrl": "https://jazepai.github.io/Launcher123D3131SO/main.html",
-      "BanerUrl": "https://jazepai.github.io/Launcher123D3131SO/banner.html",
+      "MainPageUrl": "https://misionegro.github.io/backend/main.html",
+      "BanerUrl": "https://misionegro.github.io/backend/banner.html",
       "ClientIP": "127.0.0.1",
       "ClientPort": "7605",
       "Unlock": false
