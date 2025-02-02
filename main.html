@@ -1,79 +1,102 @@
-
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml">
+<!DOCTYPE html>
+<html lang="en">
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<link rel="stylesheet" type="text/css" media="all" href="./style.css" />
-<link rel="stylesheet" href="css/slide.css">
-
- 
-
-<script type="text/javascript" src="./shell.js"></script>
-
-<title></title>
-      <style>
-        .bx-wrapper .bx-default-pager.bx-pager a:hover, .bx-wrapper .bx-default-pager.bx-pager a.active, .bx-wrapper .bx-default-pager.bx-pager a:focus {
-            background: url('image/img_rolling_on.gif');
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Futuristic Redirect Page</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap');
+        
+        body {
+            background-color: black;
+            color: #00ffea;
+            font-family: 'Orbitron', sans-serif;
+            text-align: center;
+            margin: 0;
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
         }
-        .bx-wrapper .bx-default-pager.bx-pager a {
-            background: url('image/img_rolling_off.gif');
-            width:8px;
-            height: 8px;
-            border-radius: 0;
-        }
-        .bx-controls-direction {
-            display: none;
-        }
-        .bx-wrapper {
-            max-width:298px !important;
+
+        .content-container {
+            background: rgba(0, 0, 0, 0.8);
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 0 15px rgba(0, 255, 234, 0.8);
+            animation: pulse 2s infinite alternate;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
             position: relative;
-            box-shadow: none;
-            border: none;
-            background: none;
+            z-index: 2;
         }
-        .bx-wrapper .bx-pager {
+
+        a {
+            color: #00ffea;
+            font-size: 20px;
+            text-decoration: none;
+            border: 3px solid #00ffea;
+            padding: 12px 24px;
+            border-radius: 8px;
+            display: inline-block;
+            transition: all 0.3s ease-in-out;
+            box-shadow: 0 0 10px #00ffea;
+        }
+
+        a:hover {
+            background-color: #00ffea;
+            color: black;
+            box-shadow: 0 0 20px #00ffea;
+        }
+
+        @keyframes pulse {
+            from {
+                box-shadow: 0 0 10px rgba(0, 255, 234, 0.5);
+            }
+            to {
+                box-shadow: 0 0 20px rgba(0, 255, 234, 1);
+            }
+        }
+
+        @keyframes changeBackground {
+            0% { background-image: url('background1.jpg'); }
+            33% { background-image: url('background2.jpg'); }
+            66% { background-image: url('background3.jpg'); }
+            100% { background-image: url('background1.jpg'); }
+        }
+
+        body::before {
+            content: '';
             position: absolute;
-            right: 5%;
-            bottom: 5%;
-            width: auto;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-size: cover;
+            background-position: center;
+            animation: changeBackground 15s infinite;
+            z-index: -1;
         }
-      </style>
+
+        body::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(0, 0, 0, 0.5);
+            backdrop-filter: blur(5px);
+            z-index: -1;
+        }
+    </style>
 </head>
 <body>
-<div id="launcher-wrap">
-    <!-- header -->
-    <div id="header">
-        <!--<h1><a href="/Main/Main.aspx"><img src="images/us/h1_logo.jpg" alt="digimon masters" /></a></h1>-->
+    <div class="content-container">
+        <a href="https://discord.gg/pVxQU5Zdzx" target="_blank">Enter Discord NDMO</a>
     </div>
-    <hr />
-    <!-- //header -->
-    						    
-
-    <!-- contents -->
-    <div id="contents">
-        <div class="event-banner">
-            <div id="rolling">
-                <div id="slider" class="slide_area">
-                    
-                    <div class="slider">
-                        <div onclick="window.open('about:blank').location.href = 'https://spladmo.gameking.com/News/EventView.aspx?idx=146'"><img src='http://spladmo.gameking.com/digimon/banner/202501/09/118902865298.png' /></div><div onclick="window.open('about:blank').location.href = 'https://spladmo.gameking.com/News/NoticeView.aspx?idx=1262'"><img src='http://spladmo.gameking.com/digimon/banner/202501/16/157670374685.jpg' /></div>
-                        
-                    </div>
-
-                </div>
-            </div>
-
-        </div><!-- //event-banner -->
-
-        <!-- list-area -->
-        <ul class="news">
-			<li class="first"><span class="mode notice"><em>NOTICE</em></span> <a href="/News/NoticeView.aspx?idx=1269" target="_blank">Evento Promocional de Febrero [Edicion: 02/02/2025...</a></li><li ><span class="mode notice"><em>NOTICE</em></span> <a href="/News/NoticeView.aspx?idx=1268" target="_blank">Noticia de Mantenimiento</a></li><li ><span class="mode notice"><em>NOTICE</em></span> <a href="/News/NoticeView.aspx?idx=1267" target="_blank">Noticia de Mantenimiento</a></li><li ><span class="mode notice"><em>NOTICE</em></span> <a href="/News/NoticeView.aspx?idx=1266" target="_blank">Carta de D'Maestro para Digimon Masters Latinoamer...</a></li><li ><span class="mode event"><em>EVENT</em></span> <a href="/News/EventView.aspx?idx=148" target="_blank">Nota de Actualizacion en 23/1/2025...</a></li><li ><span class="mode notice"><em>NOTICE</em></span> <a href="/News/NoticeView.aspx?idx=1265" target="_blank">Aviso de Mantenimiento</a></li>
-        </ul>
-        <!-- //list-area -->
-    </div>
-    <!-- //contents -->
-</div>
 </body>
 </html>
-
-
