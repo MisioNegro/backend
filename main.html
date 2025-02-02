@@ -9,6 +9,9 @@
         
         body {
             background-color: black;
+            background-image: url('original.png'); /* Reemplaza con la ruta de tu imagen */
+            background-size: cover;
+            background-position: center;
             color: #00ffea;
             font-family: 'Orbitron', sans-serif;
             text-align: center;
@@ -59,26 +62,6 @@
             to {
                 box-shadow: 0 0 20px rgba(0, 255, 234, 1);
             }
-        }
-
-        @keyframes changeBackground {
-            0% { background-image: url('original.png'); }
-            33% { background-image: url('background2.jpg'); }
-            66% { background-image: url('background3.jpg'); }
-            100% { background-image: url('background1.jpg'); }
-        }
-
-        body::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background-size: cover;
-            background-position: center;
-            animation: changeBackground 15s infinite;
-            z-index: -1;
         }
 
         body::after {
