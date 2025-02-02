@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Futuristic Redirect Page</title>
+    <title>Futuristic Game Updates</title>
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap');
         
@@ -23,36 +23,55 @@
             overflow: hidden;
         }
 
-        .content-container {
+        .container {
+            display: flex;
+            gap: 20px;
             background: rgba(0, 0, 0, 0.8);
-            padding: 30px;
+            padding: 20px;
             border-radius: 15px;
             box-shadow: 0 0 15px rgba(0, 255, 234, 0.8);
             animation: pulse 2s infinite alternate;
         }
 
-        h1 {
-            font-size: 2.5rem;
-            text-transform: uppercase;
-            text-shadow: 0 0 10px #00ffea;
-        }
-
-        a {
-            color: #00ffea;
-            font-size: 20px;
-            text-decoration: none;
-            border: 3px solid #00ffea;
-            padding: 12px 24px;
-            border-radius: 8px;
-            display: inline-block;
-            transition: all 0.3s ease-in-out;
+        .carousel-container {
+            width: 400px;
+            overflow: hidden;
+            border-radius: 10px;
             box-shadow: 0 0 10px #00ffea;
         }
 
-        a:hover {
+        .carousel {
+            display: flex;
+            transition: transform 0.5s ease-in-out;
+        }
+
+        .carousel img {
+            width: 400px;
+            height: 250px;
+            border-radius: 10px;
+        }
+
+        .buttons {
+            margin-top: 10px;
+        }
+
+        .buttons button {
             background-color: #00ffea;
-            color: black;
-            box-shadow: 0 0 20px #00ffea;
+            border: none;
+            padding: 10px 15px;
+            cursor: pointer;
+            font-family: 'Orbitron', sans-serif;
+            border-radius: 5px;
+            margin: 5px;
+        }
+
+        .patch-info {
+            width: 300px;
+            text-align: left;
+            padding: 15px;
+            background: rgba(0, 0, 0, 0.6);
+            border-radius: 10px;
+            box-shadow: 0 0 10px #00ffea;
         }
 
         @keyframes pulse {
@@ -63,24 +82,47 @@
                 box-shadow: 0 0 20px rgba(0, 255, 234, 1);
             }
         }
-
-        body::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background: rgba(0, 0, 0, 0.5);
-            backdrop-filter: blur(5px);
-            z-index: -1;
-        }
     </style>
 </head>
 <body>
-    <div class="content-container">
-        <h1>Join the Future</h1>
-        <a href="https://discord.gg/NJwt8ZcfEt" target="_blank">Enter Discord NDMO</a>
+    <div class="container">
+        <div class="carousel-container">
+            <div class="carousel" id="carousel">
+                <img src="https://via.placeholder.com/400x250?text=Image+1" alt="Image 1">
+                <img src="https://via.placeholder.com/400x250?text=Image+2" alt="Image 2">
+                <img src="https://via.placeholder.com/400x250?text=Image+3" alt="Image 3">
+            </div>
+            <div class="buttons">
+                <button onclick="prevSlide()">&#9665; Prev</button>
+                <button onclick="nextSlide()">Next &#9655;</button>
+            </div>
+        </div>
+        <div class="patch-info">
+            <h2>Patch Notes</h2>
+            <p>- Improved game performance.</p>
+            <p>- Fixed critical bugs.</p>
+            <p>- Added new skins and items.</p>
+            <p>- Server stability improvements.</p>
+        </div>
     </div>
+
+    <script>
+        let index = 0;
+        const slides = document.querySelectorAll('.carousel img');
+        function showSlide(i) {
+            if (i >= slides.length) index = 0;
+            if (i < 0) index = slides.length - 1;
+            document.getElementById('carousel').style.transform = `translateX(${-index * 400}px)`;
+        }
+        function nextSlide() {
+            index++;
+            showSlide(index);
+        }
+        function prevSlide() {
+            index--;
+            showSlide(index);
+        }
+        setInterval(() => nextSlide(), 3000); // Auto-slide every 3 seconds
+    </script>
 </body>
 </html>
